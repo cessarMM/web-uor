@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unidad de Oncología Riobamba</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Cessar Maldonado M." />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />	
+	<meta name="copyright" content="UOR" />
+	<!-- STYLES -->
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/styles-core.css" />
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<!-- resposive menu -->
+	<link rel="stylesheet" href="css/jquery.mmenu.all.css">
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="js/third/modernizr.custom.82263.js"></script>
+	<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- resposive menu script -->
+    <script type="text/javascript" src="js/third/jquery.mmenu.min.all.js"></script>
+	<script type="text/javascript" src="js/third/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/third/jquery.bxslider.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$( '.info-slider' ).fadeIn(1230);
+ 			$('.bxslider').bxSlider({
+ 				speed: 1230,
+ 				auto: true,
+ 				onSlideAfter: function(){
+ 					// $( '.info-slider' ).fadeIn();
+ 					$( '.info-slider' ).animate({
+ 						opacity: 1,
+ 						top: "70%"
+ 					},700);
+ 				},
+ 				onSlideBefore: function(){
+ 					// $( '.info-slider' ).fadeOut();
+ 					$( '.info-slider' ).animate({
+ 						opacity: 0,
+ 						top: "110%"
+ 					});
+ 				}
+ 			});
+
+ 			$('button').click(function () {
+ 				var  $actualButton = $(this),
+ 					$typeButton = $actualButton.data('info'),
+ 					divClass = '.' + $typeButton,
+ 					divClassCSS = $(divClass).css('display');
+
+ 					$( '.anuncios-info, .introduccion-info, .conocenos-info' ).slideUp();
+ 					$('button').removeClass('info-home-active');
+ 					$('button').html('Ver más...');
+
+ 					if (divClassCSS == 'block') {
+ 						$actualButton.html('Ver más...');
+ 						$(divClass).slideUp();
+ 					} else {
+ 						$actualButton.html('Ver menos');
+ 						$actualButton.addClass('info-home-active');
+ 						$(divClass).slideDown();
+ 					}
+ 			});
+
+ 			// $( '.button-anuncios' ).click(function() {
+ 			// 	$( '.anuncios-info, .introduccion-info, .conocenos-info' ).slideUp();
+ 			// 	$('.anuncios-info').slideDown();
+ 			// 	var buttonContent = $('.button-anuncios').html();
+ 			// 	if (buttonContent == 'Ver más...') {
+ 			// 		$('.button-anuncios').html('Ver menos');
+ 			// 	} else {
+ 			// 		$('.button-anuncios').html('Ver más...');
+ 			// 	};
+ 			// });
+
+			$('#my-menu').mmenu({
+				//options
+			} , {
+				//configuration
+				// offCanvas: {
+				// 	pageNodetype: "footer"
+				// }
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<header class="inner-row">
+			<h1><a href="index.html"><img src="images/logo-UOR.gif" alt="Logo UOR"></a></h1>
+			<nav id="my-menu">
+				<ul>
+					<li><a href="">INICIO</a></li>
+					<li><a href="">¿QUIENES SOMOS?</a></li>
+					<li><a href="">SERVICIOS</a></li>
+					<li><a href="">CLÍNICAS</a></li>
+					<li><a href="">INSTALACIONES</a></li>
+					<li><a href="">PACIENTES</a></li>
+					<li><a href="">CONTACTO</a></li>
+				</ul>
+			</nav>
+			<div class="clearFix"></div>
+		</header>
+		<div id="slider">
+			<ul class="bxslider">
+				<li>
+					<div class="info-slider">
+						<p>Estamos trabajando para brindarte un buen servicio.</p>
+					</div>
+					<img src="images/home/slides/cirugia.jpg" alt="cirugia">
+				</li>
+				<li>
+					<div class="info-slider">
+						Sitio en construcción. Gracias por tu visita.
+					</div>
+					<img src="images/home/slides/analisis.jpg" alt="analisis">
+				</li>
+				<!-- <li>
+					<img src="" alt="">
+				</li> -->
+			</ul>
+		</div> <!-- end slider -->
+		<div class="row-fluid inner-row text-home">
+			<h2>BIENVENIDOS A LA UNIDAD DE ONCOLOGÍA RIOBAMBA</h2>
+			<p>Por el momento este sitio se encuentra en construcción.</p>
+			<p>Continua visitandonos para conocer mas acerca de los servicios y promociones que ofrecemos.</p>
+		</div> <!-- end row-fluid -->
+		<div class="row-container">
+			<div class="cols-container text-home inner-row">
+				<div class="cols-3">
+					<div class="info-container">
+						<h3>ANUNCIOS</h3>
+						<p>¿Quieres ser miembro de Unidad Oncología Riobamba?</p>
+						<p>Mes del cancer de…</p>
+						<p>Unidad de Oncología Riobamba en tu comunidad</p>
+						<button class="button-anuncios" data-info="anuncios-info">Ver más...</button>
+					</div> <!-- end info-container -->
+				</div>
+				<div class="cols-3">
+					<div class="info-container">
+						<h3>INTRODUCCIÓN</h3>
+						<p>En el cuerpo humano las células crecen y se multiplican de forma normal. Durante el crecimiento y multiplicación celular puede ocurrir un error…</p>
+						<button class="button-introduccion" data-info="introduccion-info">Ver más...</button>
+					</div> <!-- end info-container -->
+				</div>
+				<div class="cols-3">
+					<div class="info-container">
+						<h3>CONOCENOS</h3>
+						<p>Unidad de Oncología Riobamba nace de la necesidad de enseñar a la población que la solución para detener el paso acelerado de esta enfermedad es la prevención.</p>
+						<button class="button-conocenos" data-info="conocenos-info">Ver más...</button>
+					</div> <!-- end info-container -->
+				</div>
+				<div class="clearFix"></div>
+			</div> <!-- end cols-container -->
+			<div class="anuncios-info normal-text">
+				<div class="inner-row normal-text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab excepturi facilis ad obcaecati commodi necessitatibus modi tenetur ipsa, fugiat eius unde natus animi quae numquam voluptatibus vel. Rerum, fuga, recusandae!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos laboriosam, asperiores quos illum in praesentium? Voluptatem sapiente vitae animi tempora minima hic nesciunt dignissimos eaque, illo neque nostrum est perferendis.</p>
+				</div> <!-- end inner-row -->
+			</div> <!-- end anuncios-info -->
+			<div class="introduccion-info">
+				<div class="inner-row normal-text">
+					<h3>INTRODUCCIÓN</h3>
+					<p>EL CÁNCER SE DEFINE COMO UN CRECIMIENTO DESCONTROLADO DE CÉLULAS ANORMALES EN EL CUERPO. LAS CÉLULAS CANCEROSAS TAMBIÉN SE DENOMINAN CÉLULAS MALIGNAS.</p>
+					<p>EN EL CUERPO HUMANO LAS CÉLULAS  CRECEN Y SE MULTIPLICAN DE FORMA NORMAL DE ACUERDO A LAS NECESIDADES QUE TIENE EL ORGANISMO. DURANTE EL CRECIMIENTO Y MULTIPLICACIÓN CELULAR PUEDE OCURRIR UN ERROR YA SEA EN LA REGULACIÓN DEL CRECIMIENTO O EN LA ESTIMULACIÓN DEL MISMO QUE PRODUZCA  UNA PERDIDA DEL CONTROL DE MULTIPLICACIÓN CELULAR POR LO QUE ESTAS SE DIVIDEN DEMASIADO RAPIDO Y ORIGINANDO LA ENFERMEDAD.</p>
+					<p>EXISTEN MULTIPLES TIPOS DE CÁNCER YA QUE ESTE PUEDE OCURRIR PRACTICAMENTE EN CUALQUIER TEJIDO DEL ORGANISMO. DENTRO DE LAS CAUSAS DE CÁNCER PODEMOS MENCIONAR: FACTORES QUÍMICOS, ALTERACIONES GENETICAS, ESTIMULOS DEL MEDIO AMBIENTE EN EL QUE VIVIMOS, INFECCIONES, ETC. TODAS ESTAS CONDICIONES PREDISPONEN A LA PERDIDA DEL CONTROL DE MULTIPLICACIÓN CELULAR.</p>
+					<p>DE ACUERDO A LAS ESTADISTICAS REPORTADAS LOS CANCERES MÁS FRECUENTES EN EL HOMBRE SON: CÁNCER DE PROSTATA, CÁNCER DE PULMÓN Y CÁNCER DE COLON;  EN LA MUJER CÁNCER DE MAMA, CÁNCER DE COLON Y CANCER CERVICOUTERINO, SIN EMBARGO, ESTA FRECUENCIA PUEDE CAMBIAR DE ACUERDO A CIERTAS REGIONALIZACIONES A NIVEL MUNDIAL (POR EJEMPLO CÁNCER DE ESTOMAGO EN PAÍSES ASIATICOS).</p>
+					<p>A PESAR DE LAS MULTIPLES CAMPAÑAS DE DETECCIÓN E INFORMACIÓN EL 70 A 80% DE LOS PACIENTES QUE LLEGAN A CONSULTA CON UN ESPECIALISTA EN ONCOLOGÍA PARA ATENDER SU PROBLEMA LLEGAN EN UNA ETAPA TARDIA DE LA ENFERMEDAD POR LO QUE EL PRONOSTICO DE SOBREVIDA ES MUY BAJO. ESTO PUEDE SER DEBIDO A MUCHAS CASUAS COMO FALTA DE PREVENCIÓN POR PARTE DE LA SOCIEDAD EN LA QUE NOS DESARROLLAMOS, FALTA DE CENTROS ESPECIALIZADOS EN EL PAIS  Y FALTA DE PERSONAL Y TIEMPOS DE TRATAMIENTO EN LOS POCOS CENTROS DE ASISTENCIA PUBLICA QUE HAY EN MEXICO. CON RELACIÓN A LA ACTIVIDAD DE MEDICINA PRIVADA SON MUY POCOS LOS CENTROS QUE EXISTEN Y LA ECONOMIA DE LOS PACIENTES NO LES PERMITE OBTENER UN TRATAMIENTO OPORTUNO.</p>
+					<p>UNIDAD DE ONCOLOGIA RIOBAMBA NACE DE LA NECESIDAD DE OFRECER A LOS PACIENTES NO SOLO DETECCIÓN OPORTUNA Y TRATAMIENTOS ADECUADOS SINO ADEMAS DE ENSEÑAR A LA POBLACIÓN DE QUE LA SOLUCION PARA DETENER EL PASO ACELERADO QUE TIENE ESTA ENFERMEDAD ES LA PREVENCIÓN.</p>
+					<p>TE INVITAMOS A QUE JUNTOS NOS ENFFRENTEMOS A ESTA TERRIBLE ENFERMEDAD. RECUERDA:</p>
+					<p class="large-text">“EXPERIENCIA Y TECNOLOGÍA CONTRA EL CÁNCER”</p>
+				</div> <!-- end inner-row -->
+			</div> <!-- end introduccion-info -->
+			<div class="conocenos-info">
+				<div class="inner-row normal-text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sequi aspernatur totam illum corrupti deleniti necessitatibus, deserunt omnis consequuntur. Voluptas natus, repudiandae rerum? Dolores debitis error, enim delectus repudiandae dicta.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum mollitia necessitatibus sequi. Esse dolor, ut ullam ipsam illo quidem eius quae accusantium eveniet incidunt corporis, nihil fugit neque temporibus a.</p>	
+				</div> <!-- end inner-row -->
+			</div> <!-- end conocenos-info -->
+		</div> <!-- end row-container -->
+		<div class="row-fluid inner-row">
+			<h2>¡VEN A CONOCERNOS!</h2>
+		</div> <!-- end row-fluid -->
+		<div class="clearFix"></div>
+		<div class="push"></div> <!-- end push -->
+	</div> <!-- end container -->
+	<footer>
+		<div class="cols-4">
+			<h4><a href="" class="logo-footer"><img src="images/logo-UOR-footer.gif" alt="logo UOR footer"></a></h4>
+			<p>Somos un grupo de profesionales de la salud  especializados en detección oportuna, diagnóstico, tratamiento y vigilancia del cáncer.</p>
+		</div> <!-- end cols 4(1) -->
+		<div class="cols-4">
+			<h4>Avisos legales</h4>
+		</div> <!-- end cols 4(2) -->
+		<div class="cols-4">
+			<h4>Visitanos</h4>
+			<p>Unidad de Oncología Riobamba 2014</p>
+			<p>Av. Riobamba No 927 Col. Lindavista, Del. Gustavo A Madero, México D.F.</p> 
+			<p>Tel: <a href="tel:015565530047">6553·0047</a> - <a href="tel:015565530055">6553·0055</a></p>
+			<p>E-mail: <a href="mailto:contacto@uor.com.mx">contacto@uor.com.mx</a></p>
+		</div> <!-- end cols 4(3) -->
+		<div class="cols-4">
+			<h4>Mantente conectado</h4>
+		</div> <!-- end cols 4(4) -->
+		<div class="clearFix"></div>
+		<div class="rights-footer"><p>UOR © 2014 All rights reserved</p></div> <!-- end rights-footer -->
+	</footer>
+</body>
+</html>

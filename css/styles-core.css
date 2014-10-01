@@ -1,0 +1,338 @@
+/*FONTS*/
+
+@font-face {
+    font-family: 'segoe_light';
+    src: url('../fonts/segoeuil-webfont.eot');
+    src: url('../fonts/segoeuil-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/segoeuil-webfont.woff2') format('woff2'),
+         url('../fonts/segoeuil-webfont.woff') format('woff'),
+         url('../fonts/segoeuil-webfont.ttf') format('truetype'),
+         url('../fonts/segoeuil-webfont.svg#segoe_uilight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'segoe_regular';
+    src: url('../fonts/segoeui-webfont.eot');
+    src: url('../fonts/segoeui-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/segoeui-webfont.woff2') format('woff2'),
+         url('../fonts/segoeui-webfont.woff') format('woff'),
+         url('../fonts/segoeui-webfont.ttf') format('truetype'),
+         url('../fonts/segoeui-webfont.svg#segoe_ui_8regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'segoe_bold';
+    src: url('../fonts/segoeuib-webfont.eot');
+    src: url('../fonts/segoeuib-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/segoeuib-webfont.woff2') format('woff2'),
+         url('../fonts/segoeuib-webfont.woff') format('woff'),
+         url('../fonts/segoeuib-webfont.ttf') format('truetype'),
+         url('../fonts/segoeuib-webfont.svg#segoe_ui_8bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*GENERAL STYLES*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    max-width: 1240px;
+    font-family: segoe_light, helvetica, arial;
+    color: #8f8f8f;
+    outline: 1px solid red;
+    margin: 0 auto;
+}
+
+#container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -123px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.push {
+    height: 123px;
+}
+
+
+
+.clearFix {
+    clear: both;
+}
+
+h2 {
+    font-family: segoe_regular;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 23px;
+}
+
+h3 {
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+
+.inner-row {
+    width: 77.41%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*HEADER STYLES*/
+
+header {
+    /*outline: 1px solid green;*/
+    padding: 38px 0;
+}
+
+h1 {
+    width: 25%;
+    float: left;
+   /* outline: 1px solid blue;*/
+}
+
+h1 img {
+    max-width: 100%;
+}
+
+nav {
+    padding-top: 32px;
+    float: right;
+    /*width: 75%;*/
+    /*outline: 1px solid red;*/
+}
+
+nav ul {
+   /* display: inline;*/
+    float: right;
+    /*outline: 1px solid green;*/
+    width: 100%;
+}
+
+nav ul li {
+    float: left;
+    height: 38px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    outline: 1px solid #fff;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    /*font-family: segoe_regular;*/
+    color: #8f8f8f;
+    text-decoration: none;
+    background: #fff;
+    /*background: -webkit-linear-gradient(#fff, #ffa800);
+    background: linear-gradient(#fff, #ffa800);*/ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(#ffa800 0%, #ffa800 50%, #fff 50%, #fff 100%);
+    background: -o-linear-gradient(#ffa800 0%, #ffa800 50%, #fff 50%, #fff 100%);
+    background: linear-gradient(#ffa800 0%, #ffa800 50%, #fff 50%, #fff 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(#ffa800 0%, #ffa800 50%, #fff 50%, #fff 100%);
+    -webkit-background-size: 100% 200%;
+    background-size: 100% 200%;
+    -webkit-transition: all .5s linear;
+    transition: all .32s ease-out;
+    background-position: 0 -100%;
+}
+
+nav ul li a:hover {
+    /*background-color: #ffa800;*/
+    color: #fff;
+    background-position: 0 0%;
+}
+
+
+
+/*FOOTER STYLES*/
+
+footer {
+    color: #d7d7d7;
+    background-color: #8f8f8f;
+}
+
+footer h4 {
+    color: #dcdcdc;
+    font-size: 18px;
+    font-family: segoe_regular;
+    padding-left: 17px;
+}
+
+footer p {
+    font-size: 14px;
+    padding: 5px 17px;
+    line-height: 17px;
+}
+
+footer .cols-4 {
+    padding: 23px 0 9px;
+}
+
+.logo-footer {
+    max-width: 59%;
+    display: block;
+    margin-bottom: 9px;
+}
+
+.logo-footer img {
+    max-width: 100%;
+}
+
+.rights-footer {
+    margin-top: 2px solid #232323;
+    padding: 9px 0;
+    text-align: center;
+    background-color: #d7d7d7;
+    color: #232323;
+}
+
+footer a {
+    color: #d7d7d7;
+    transition: all .8s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+
+
+
+
+/*HOME STYLES*/
+
+.slider {
+    position: relative;
+}
+
+.info-slider {
+    display: none;
+    /*opacity: 0.0;*/
+    position: absolute;
+    top: 70%;
+    max-width: 32%;
+    left: 9%;
+    font-family: segoe_regular;
+    font-size: 32px;
+    /*color: #f48d21;*/
+    color: #444;
+    background-color: rgba(255,255,255,0.6);
+    padding: 7px 9px;
+    /*border: 1px solid #fff;*/
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+
+.text-home {
+    font-family: segoe_light;
+    font-size: 19px;
+    text-align: center;
+}
+
+.text-home p {
+    padding: 3px 0;
+    line-height: 27px;
+}
+
+.row-fluid {
+    margin-bottom: 32px;
+}
+
+.row-container {
+    background-color: #fc9423;
+    margin-bottom: 40px;
+}
+
+.cols-container {
+    color: #fff;
+    padding: 32px 0 90px;
+    position: relative;
+}
+
+.cols-3 {
+    width: 33.33%;
+    float: left;
+}
+
+.info-container {
+    padding: 0 15px;
+}
+
+.cols-3 button {
+    position: absolute;
+    bottom: 23px;
+    margin-left: -7%;
+    font-size: 15px;
+    color: #fff;
+    background-color: #fc9423;
+    border: 1px solid #fff;
+    width: 14%;
+    padding: 15px 0;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    transition: all .23s ease-out;
+}
+
+.cols-3 button:hover {
+    background-color: #fff;
+    color: #fc9423;
+}
+
+.cols-3 button:focus {
+    outline: 0;
+}
+
+.cols-4 {
+    float: left;
+    width: 25%;
+}
+
+.anuncios-info, .introduccion-info, .conocenos-info {
+    /*color: #fff;*/
+    background-color: #f6f6f6;
+    display: none;
+    font-size: 14px;
+    padding: 32px 0;
+}
+
+button.info-home-active {
+    background-color: #fff;
+    color: #fc9423;
+}
+
+.normal-text p {
+    margin: 9px 0;
+}
+
+.large-text {
+    font-size: 23px;
+    text-align: center;
+    padding: 16px 0;
+}
+
+
+
+/*CLEAN THIS STYLES*/
+
+
+
+
+
+
